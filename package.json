@@ -1,0 +1,25 @@
+{
+  "name": "subscribeful",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm-run-all --parallel api view",
+    "view": "cd view && npm start",
+    "api": "cd api && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Goodbananas/Subscribeful.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Goodbananas/Subscribeful/issues"
+  },
+  "homepage": "https://github.com/Goodbananas/Subscribeful#readme",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}

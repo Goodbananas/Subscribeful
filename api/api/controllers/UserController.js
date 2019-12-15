@@ -2,9 +2,25 @@ const User = require('../models/User');
 const authService = require('../services/auth.service');
 const bcryptService = require('../services/bcrypt.service');
 
+const EMAIL_REGEX_PATTERN = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
 const UserController = () => {
+  /*
+  POST ${URL}/public/register
+  email
+  password
+  password2
+  */
   const register = async (req, res) => {
     const { body } = req;
+
+    if(!EMAIL_REGEX_PATTERN.test(String(email).toLowerCase()))
+      return res.status(400).json({ msg: 'Bad Request: Email must be an email, such as example@gmail.com' });
+
+    if(body.password.length < 8)
+      return res.status(400).json({ msg: 'Bad Request: Password must be larger than 8 characters' });
+
+
 
     if (body.password === body.password2) {
       try {

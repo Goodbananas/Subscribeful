@@ -11,24 +11,42 @@
 - built with [npm sripts](#npm-scripts)
 - example for User model and User controller, with jwt authentication, simply type `npm i` and `npm start`
 
+## How to query
+http://localhost:2017/public/register
+
+  'POST /user': 'UserController.register',
+  'POST /register': 'UserController.register', // alias for POST /user
+  'POST /login': 'UserController.login',
+  'POST /validate': 'UserController.validate',
+  
 ## Table of Contents
 
-- [Install & Use](#install-and-use)
-- [Folder Structure](#folder-structure)
-- [Controllers](#controllers)
-  - [Create a Controller](#create-a-controller)
-- [Models](#models)
-  - [Create a Model](#create-a-model)
-- [Policies](#policies)
+- [express-rest-api-boilerplate](#express-rest-api-boilerplate)
+  - [How to query](#how-to-query)
+  - [Table of Contents](#table-of-contents)
+  - [Install and Use](#install-and-use)
+  - [Folder Structure](#folder-structure)
+  - [Controllers](#controllers)
+    - [Create a Controller](#create-a-controller)
+  - [Models](#models)
+    - [Create a Model](#create-a-model)
+  - [Policies](#policies)
   - [auth.policy](#authpolicy)
-- [Services](#services)
-- [Config](#config)
+  - [Services](#services)
+  - [Config](#config)
   - [Connection and Database](#connection-and-database)
-- [Routes](#routes)
+  - [Routes](#routes)
   - [Create Routes](#create-routes)
-- [Test](#test)
-  - [Setup](#setup)
-- [npm Scripts](#npm-scripts)
+  - [Test](#test)
+    - [Setup](#setup)
+    - [Controller](#controller)
+    - [Models](#models-1)
+  - [npm scripts](#npm-scripts)
+    - [npm start](#npm-start)
+    - [npm test](#npm-test)
+  - [npm run production](#npm-run-production)
+    - [other commands](#other-commands)
+  - [LICENSE](#license)
 
 ## Install and Use
 
