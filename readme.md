@@ -1,1 +1,4 @@
-npm-run-all api view
+## How to run
+```
+npm start
+```
